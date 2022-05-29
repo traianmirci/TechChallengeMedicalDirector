@@ -1,4 +1,4 @@
-# MedicalDirector
+# Tech Challenge @MedicalDirector
 
 ## Get started 
 Open solution 
