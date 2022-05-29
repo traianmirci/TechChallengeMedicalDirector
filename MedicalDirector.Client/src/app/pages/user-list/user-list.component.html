@@ -1,0 +1,23 @@
+<div class="container">
+  <table *ngIf="UsersList.length !== 0" class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">PostCount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of UsersList">
+        <td>{{ user.id}}</td>
+        <td><a [routerLink]="['details/', user.id.toString()]">{{ user.name }}</a></td>
+        <td>{{ user.username}}</td>
+        <td>{{ user.postCount }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="float-end">
+    <button type="button" (click)="exportCSV()" class="btn btn-primary btn-sm">Export to CSV</button>
+  </div>
+</div>
